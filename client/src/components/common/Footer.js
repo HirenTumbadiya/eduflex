@@ -4,8 +4,11 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 py-4">
       <div className="container mx-auto px-4">
-        <div className="flex justify-center mt-2">
-          <ul className="flex space-x-4">
+        <div className="flex flex-col justify-center items-center mt-2">
+          <ul className="flex flex-col md:flex-row flex-wrap justify-center md:justify-start space-x-4">
+            <li>
+              <a href="/about" className="text-white hover:text-gray-400 transition-colors duration-300">Home</a>
+            </li>
             <li>
               <a href="/about" className="text-white hover:text-gray-400 transition-colors duration-300">About Us</a>
             </li>
@@ -19,9 +22,7 @@ const Footer = () => {
               <a href="/terms" className="text-white hover:text-gray-400 transition-colors duration-300">Terms of Service</a>
             </li>
           </ul>
-        </div>
-        <div className="flex justify-center">
-          <p className="text-white text-sm">&copy; {new Date().getFullYear()} Stock Market Education. All rights reserved.</p>
+          <p className="text-white text-sm mt-4 md:mt-0 text-center md:text-left">&copy; {new Date().getFullYear()} Stock Market Education. All rights reserved.</p>
         </div>
       </div>
     </footer>

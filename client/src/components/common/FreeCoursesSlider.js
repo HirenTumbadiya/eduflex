@@ -32,11 +32,11 @@ const FreeCoursesSlider = ({ courses }) => {
 
   return (
     <div className="mt-8">
-      <div className="flex">
-        <div className="w-1/4 pr-4">
-        <p className="text-4xl font-bold mb-4 py-10">Browse our collection of free courses:</p>
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/4 pr-4">
+          <p className="md:text-4xl text-center md:text-start text-xl font-bold mb-4 md:py-10">Browse our collection of free courses:</p>
         </div>
-        <div className="w-3/4">
+        <div className="md:w-3/4">
           <Slider {...sliderSettings}>
             {courses
               .filter((course) => course.type === 'free')

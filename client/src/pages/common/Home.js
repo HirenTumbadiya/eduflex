@@ -97,29 +97,30 @@ const Home = () => {
 
   return (
     <div>
-      <header className="mt-16">
-        <div className="container flex items-center">
-          <div className="w-full">
-            <img src={headerImage} alt="Stock Market" className="w-full" />
-          </div>
-          <div className="absolute text-black m-10">
-            <h1 className="text-5xl md:text-7xl font-bold">
-              LEARN WITH <br />
-              <span style={{ textShadow: `2px 2px 4px rgba(0, 0, 0, 0.5)` }} className="text-7xl">
-                EDUFLEX
-              </span>
-            </h1>
-            <p className="text-gray-800 mt-2">
-              Unlock the secrets of successful trading and elevate your investment decisions.
-            </p>
-          </div>
-        </div>
-      </header>
+<header className="mt-16 relative">
+  <div className="container flex items-center">
+    <div className="w-full">
+      <img src={headerImage} alt="Stock Market" className="w-full" />
+    </div>
+    <div className="absolute text-black m-10 bg-pink-500 bg-opacity-50 backdrop-filter backdrop-blur-lg p-4 rounded-lg">
+      <h1 className="text-5xl md:text-7xl font-bold">
+        LEARN WITH <br />
+        <span style={{ textShadow: `2px 2px 4px rgba(0, 0, 0, 0.5)` }} className="text-7xl">
+          EDUFLEX
+        </span>
+      </h1>
+      <p className="text-gray-800 mt-2">
+        Unlock the secrets of successful trading and elevate your investment decisions.
+      </p>
+    </div>
+  </div>
+</header>
 
-      <div className="m-20 mt-0">
+
+      <div className="m-5 md:m-20 mt-0">
         <section className="py-12">
           <div className="">
-            <div className="flex justify-between mx-10 shadow-xl">
+            <div className="md:flex md:justify-between mx-10 shadow-xl">
               <FeatureCard
                 title="Beginner's Guide"
                 description="Learn the basics of stock market trading, from terminology to investment strategies."
@@ -180,7 +181,7 @@ const Home = () => {
         <section className="py-12 bg-gray-100">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-4xl font-bold flex justify-center">Latest Articles</h2>
-            <div className='flex justify-between'>
+            <div className='md:flex md:justify-between'>
             {latestArticles.map((article) => (
               <div key={article.id} className="border p-4 mt-8">
                 <img src={article.image} alt={article.title} className="w-full h-48 object-cover mb-4" />

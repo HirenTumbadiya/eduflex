@@ -2,7 +2,6 @@ import React from 'react';
 import ToolCard from '../../components/common/ToolCard';
 
 const Tools = () => {
-  // Dummy trading tool data
   const tools = [
     {
       id: 1,
@@ -22,7 +21,6 @@ const Tools = () => {
       description: 'Track and manage your investment portfolio with real-time updates and performance analytics.',
       icon: 'fas fa-briefcase',
     },
-    // Add more trading tool objects as needed
   ];
 
   return (

@@ -43,10 +43,10 @@ const Navbar = () => {
       </div>
       <div
         className={`w-full flex-grow lg:flex lg:items-center lg:w-auto ${
-          isMenuOpen ? 'block' : 'hidden'
+          isMenuOpen ? 'block h-screen' : 'hidden'
         }`}
       >
-        <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
+        <ul className={`flex flex-col lg:flex-row list-none lg:ml-auto`}>
           <li className='nav-item'>
             <Link to='/' className='px-3 py-2 hover:text-blue-200'>
               Home

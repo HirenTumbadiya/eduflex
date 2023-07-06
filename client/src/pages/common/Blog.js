@@ -28,7 +28,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="mt-20">
+    <div className="mt-16">
           <section className="relative flex h-60">
           <div
             className="absolute inset-0 bg-gradient-to-r from-black to-transparent"
@@ -43,9 +43,9 @@ const Blog = () => {
           </div>
       </div>
         </section>
-      <div className="m-20 mt-0">
+      <div className="m-5 md:m-20 mt-0">
       {/* Search Bar */}
-      <section className="py-6 bg-gray-100 shadow-sm shadow-black">
+      {/* <section className="py-6 bg-gray-100 shadow-sm shadow-black">
         <div className="container mx-auto px-4">
           <input
             type="text"
@@ -53,7 +53,7 @@ const Blog = () => {
             className="w-full md:w-1/2 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-      </section>      
+      </section>       */}
       {/* Latest Blog */}
       <section className="py-12">
         <div className="container mx-auto px-4">

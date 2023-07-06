@@ -11,7 +11,6 @@ const Workshops = () => {
 
   const fetchWorkshops = async () => {
     try {
-      // Simulating dummy data for workshops
       const dummyWorkshops = [
         {
           id: 1,
@@ -50,7 +49,7 @@ const Workshops = () => {
   };
 
   return (
-    <div className="mt-20">
+    <div className="mt-16">
           <section className="relative flex h-60">
           <div
             className="absolute inset-0 bg-gradient-to-r from-black to-transparent"
@@ -66,9 +65,9 @@ const Workshops = () => {
       </div>
         </section>
 
-        <div className="m-20 mt-10">
+        <div className="md:m-20 mt-10">
       <section>
-        <h2 className="text-xl font-bold mb-4">Upcoming Workshops</h2>
+        <h2 className="text-xl font-bold mb-4 mx-20">Upcoming Workshops</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {workshops
             .filter((workshop) => workshop.status === 'upcoming')

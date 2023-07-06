@@ -155,7 +155,7 @@ const Courses = () => {
   const allCourses = [...dummyCourses, ...courses];
 
   return (
-    <div className='mt-20'>
+    <div className='mt-16'>
     <section className="relative flex h-60">
           <div
             className="absolute inset-0 bg-gradient-to-r from-black to-transparent"
@@ -171,7 +171,7 @@ const Courses = () => {
       </div>
         </section>
 
-        <div className="m-20 mt-0">
+        <div className="m-5 md:m-20 mt-0">
       <section>
         <FreeCoursesSlider courses={allCourses} />
       </section>
@@ -209,25 +209,10 @@ const Courses = () => {
         </section>
 
       <section className='mt-10'>
-        <h2 className='flex justify-center text-center text-4xl font-bold mb-5'>Bootcamp Courses</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allCourses
-            .filter((course) => course.type === 'bootcamp')
-            .map((course) => (
-              <div key={course.id} className="border p-4">
-                <h3>{course.title}</h3>
-                <p>{course.description}</p>
-                {/* Add more course details as needed */}
-              </div>
-            ))}
-        </div>
-      </section>
-
-      <section className='mt-10'>
       <h2 className='flex justify-center text-center text-4xl font-bold mb-5'>Course Categories</h2>
         <div>
           
-        <h3 className='flex text-4xl font-bold mb-5'>Beginner</h3>
+        <h3 className='flex text-xl md:text-4xl font-bold mb-5'>Beginner</h3>
         <Slider {...sliderSettings}>
             {allCourses
               .filter((course) => course.category === 'beginner')
@@ -250,7 +235,7 @@ const Courses = () => {
         </div>
 
         <div className='mt-5'>
-        <h3 className='flex text-4xl font-bold mb-5'>Intermediate</h3>
+        <h3 className='flex text-xl md:text-4xl font-bold mb-5'>Intermediate</h3>
         <Slider {...sliderSettings}>
             {allCourses
               .filter((course) => course.category === 'intermediate')
@@ -273,7 +258,7 @@ const Courses = () => {
         </div>
 
         <div className='mt-5'>
-        <h3 className='flex text-4xl font-bold mb-5'>Advanced</h3>
+        <h3 className='flex text-xl md:text-4xl font-bold mb-5'>Advanced</h3>
         <Slider {...sliderSettings}>
             {allCourses
               .filter((course) => course.category === 'advanced')

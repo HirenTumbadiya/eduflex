@@ -117,7 +117,7 @@ const AboutPage = () => {
       </div>
         </section>
         
-            <div className='m-20 mt-0'>
+            <div className='m-5 md:m-20 mt-0'>
       <section className="bg-gray-100 shadow-md shadow-black">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-center">
