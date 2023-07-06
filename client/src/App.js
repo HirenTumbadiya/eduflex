@@ -15,6 +15,8 @@ import ForgotPassword from "./pages/auth/ForgotPassword.js";
 import BlogDetail from "./pages/common/BlogDetail.js";
 import Workshops from "./pages/common/WorkShop.js";
 import AdminDashboard from "./components/admin/AdminDashboard.js";
+import TermsAndConditionsPage from "./pages/common/TermsAndConditionsPage.js";
+import PrivacyPolicy from "./pages/common/PrivacyPolicyPage.js";
 
 const ConditionalLayout = ({ component: Component, hideNavbar, hideFooter, ...rest }) => {
   return (
@@ -65,6 +67,14 @@ function App() {
         <Route
           path="/contact-us"
           element={<ConditionalLayout component={Contact} hideNavbar={false} hideFooter={false} />}
+        />
+        <Route
+          path="/privacy-policy"
+          element={<ConditionalLayout component={PrivacyPolicy} hideNavbar={false} hideFooter={false} />}
+        />
+        <Route
+          path="/terms"
+          element={<ConditionalLayout component={TermsAndConditionsPage} hideNavbar={false} hideFooter={false} />}
         />
         <Route
           path="/dashboard/*"

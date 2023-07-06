@@ -5,7 +5,11 @@ module.exports = {
 "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ['"Noto Serif Display"', 'serif', 'Roboto'],
+      },
+    },
   },
   plugins: [],
 }

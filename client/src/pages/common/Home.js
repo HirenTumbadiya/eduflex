@@ -7,6 +7,8 @@ import headerImage from '../../asset/images/header.jpg';
 import workshopImage from '../../asset/images/about.jpg';
 import testimonialImage from '../../asset/images/about.jpg';
 import articleImage from '../../asset/images/aboutbanner.jpg';
+import { Link } from 'react-router-dom';
+import ContactSection from '../../components/common/ContactSection';
 
 const Home = () => {
 
@@ -139,7 +141,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section className="py-8 bg-gray-100 shadow shadow-black">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-4xl font-bold flex justify-center">Upcoming Workshops</h2>
@@ -178,21 +179,43 @@ const Home = () => {
   </div>
 </section>
 
-        <section className="py-12 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-4xl font-bold flex justify-center">Latest Articles</h2>
-            <div className='md:flex md:justify-between'>
-            {latestArticles.map((article) => (
-              <div key={article.id} className="border p-4 mt-8">
-                <img src={article.image} alt={article.title} className="w-full h-48 object-cover mb-4" />
-                <h3 className="font-bold">{article.title}</h3>
-                <p>Date: {article.date}</p>
-                <p>Author: {article.author}</p>
-              </div>
-            ))}
-            </div>
-          </div>
-        </section>
+<section className="py-12 bg-gray-100">
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl md:text-4xl font-bold flex justify-center">Latest Articles</h2>
+    <div className="md:flex md:justify-between">
+      {latestArticles.map((article) => (
+        <div key={article.id} className="border p-4 mt-8">
+          <img src={article.image} alt={article.title} className="w-full h-48 object-cover mb-4" />
+          <h3 className="font-bold">{article.title}</h3>
+          <p>Date: {article.date}</p>
+          <p>Author: {article.author}</p>
+        </div>
+      ))}
+    </div>
+    <div className="flex justify-center mt-8">
+      <Link to={"/blog"} className="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition-colors duration-300">
+        <span>Load More</span>
+        <svg
+          className="animate-bounce ml-2 w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
+      </Link>
+    </div>
+  </div>
+</section>
+
+<ContactSection />
+
       </div>
     </div>
   );
