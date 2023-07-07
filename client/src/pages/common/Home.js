@@ -4,9 +4,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import FeatureCard from '../../components/common/FeatureCard';
 import headerImage from '../../asset/images/header.jpg';
-import workshopImage from '../../asset/images/about.jpg';
+import workshopImage from '../../asset/images/8432.jpg';
 import testimonialImage from '../../asset/images/about.jpg';
-import articleImage from '../../asset/images/aboutbanner.jpg';
+import articleImage from '../../asset/images/6240060.jpg';
 import { Link } from 'react-router-dom';
 import ContactSection from '../../components/common/ContactSection';
 
@@ -83,15 +83,15 @@ const Home = () => {
     },
     {
       id: 3,
-      title: 'Understanding Candlestick Patterns',
-      date: 'June 15, 2023',
+      title: 'Top 10 High value Stock',
+      date: 'June 25, 2023',
       author: 'Jane Smith',
       image: articleImage,
     },
     {
       id: 4,
-      title: 'Understanding Candlestick Patterns',
-      date: 'June 15, 2023',
+      title: 'Use of Scalping',
+      date: 'June 30, 2023',
       author: 'Jane Smith',
       image: articleImage,
     },

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import avatar from '../../asset/images/avatar.jpg'
+import avatar from '../../asset/images/avatar.jpg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,12 @@ const Navbar = () => {
   };
 
   const handleAvatarClick = () => {
-    navigate('/dashboard')
+    navigate('/dashboard');
+    setIsMenuOpen(false); // Close the menu after clicking on avatar
+  };
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close the menu after clicking on a list item
   };
 
   return (
@@ -48,34 +53,57 @@ const Navbar = () => {
       >
         <ul className={`flex flex-col lg:flex-row list-none lg:ml-auto`}>
           <li className='nav-item'>
-            <Link to='/' className='px-3 py-2 hover:text-blue-200'>
+            <Link
+              to='/'
+              className='px-3 py-2 hover:text-blue-200'
+              onClick={handleMenuItemClick}
+            >
               Home
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/courses' className='px-3 py-2 hover:text-blue-200'>
+            <Link
+              to='/courses'
+              className='px-3 py-2 hover:text-blue-200'
+              onClick={handleMenuItemClick}
+            >
               Courses
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/workshops' className='px-3 py-2 hover:text-blue-200'>
+            <Link
+              to='/workshops'
+              className='px-3 py-2 hover:text-blue-200'
+              onClick={handleMenuItemClick}
+            >
               Workshop
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/about' className='px-3 py-2 hover:text-blue-200'>
+            <Link
+              to='/about'
+              className='px-3 py-2 hover:text-blue-200'
+              onClick={handleMenuItemClick}
+            >
               About
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/blog' className='px-3 py-2 hover:text-blue-200'>
-              Blog
-            </Link>
+            <Link
+              to='/blog'
+              className='px-3 py-2 hover:text-blue-200'
+              onClick={handleMenuItemClick}
+            >
+              Blog           </Link>
           </li>
           {!isLoggedIn && (
             <>
               <li className='nav-item'>
-                <Link to='/login' className='px-3 py-2 hover:text-blue-200'>
+                <Link
+                  to='/login'
+                  className='px-3 py-2 hover:text-blue-200'
+                  onClick={handleMenuItemClick}
+                >
                   Login
                 </Link>
               </li>
@@ -97,7 +125,7 @@ const Navbar = () => {
           )}
         </ul>
       </div>
-    </nav>
+    </nav> 
   );
 };
 

@@ -4,6 +4,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import FreeCoursesSlider from '../../components/common/FreeCoursesSlider';
 import course from '../../asset/images/course.jpg'
+import image1 from '../../asset/images/stock1.png'
+import image2 from '../../asset/images/stock2.png'
+import image3 from '../../asset/images/stock3.png'
+import image4 from '../../asset/images/stock4.png'
 const Courses = () => {
   const [courses, setCourses] = useState([]);
 
@@ -47,111 +51,113 @@ const Courses = () => {
       console.error('Error:', error);
     }
   };
-
-  // Dummy courses for showcase
   const dummyCourses = [
     {
       id: 1,
-      title: 'React Fundamentals',
-      description: 'Learn the basics of React.js',
+      title: 'Stock Market Basics',
+      description: 'Learn the fundamentals of the stock market',
       type: 'free',
       category: 'beginner',
-      image: course,
+      image: image1,
     },
     {
       id: 2,
-      title: 'Advanced React Patterns',
-      description: 'Master advanced techniques in React.js',
+      title: 'Technical Analysis for Stock Trading',
+      description: 'Master the art of technical analysis in stock trading',
       type: 'bootcamp',
       category: 'advanced',
-      image: course,
+      image: image2,
     },
     {
       id: 3,
-      title: 'Full Stack Web Development Bootcamp',
-      description: 'Become a full stack developer with this intensive bootcamp',
+      title: 'Options Trading Strategies',
+      description: 'Discover effective options trading strategies',
       type: 'bootcamp',
       category: 'intermediate',
-      image: course,
+      image: image3,
     },
     {
       id: 4,
-      title: 'Data Science for Beginners',
-      description: 'Introduction to data science concepts and tools',
+      title: 'Value Investing Principles',
+      description: 'Learn the principles of value investing in the stock market',
       type: 'free',
       category: 'beginner',
-      image: course,
+      image: image4,
     },
     {
       id: 5,
-      title: 'Machine Learning Mastery',
-      description: 'Advanced machine learning algorithms and applications',
+      title: 'Algorithmic Trading Techniques',
+      description: 'Explore advanced algorithms for automated stock trading',
       type: 'bootcamp',
       category: 'advanced',
-      image: course,
+      image: image1,
     },
     {
       id: 6,
-      title: 'Data Science for Beginners',
-      description: 'Introduction to data science concepts and tools',
+      title: 'Stock Market Fundamentals',
+      description: 'Introduction to key concepts and terminology in the stock market',
       type: 'free',
       category: 'beginner',
-      image: course,
+      image: image2,
     },    
     {
       id: 7,
-      title: 'Data Science for Beginners',
-      description: 'Introduction to data science concepts and tools',
+      title: 'Introduction to Options Trading',
+      description: 'Get started with options trading and understand its basics',
       type: 'free',
       category: 'beginner',
-      image: course,
+      image: image4,
     },    
     {
       id: 8,
-      title: 'Data Science for Beginners',
-      description: 'Introduction to data science concepts and tools',
+      title: 'Investing in Dividend Stocks',
+      description: 'Learn how to identify and invest in dividend-paying stocks',
       type: 'free',
       category: 'beginner',
-      image: course,
+      image: image3,
     },
     {
       id: 9,
-      title: 'Full Stack Web Development Bootcamp',
-      description: 'Become a full stack developer with this intensive bootcamp',
-      type: 'free',
+      title: 'Forex Trading Strategies',
+      description: 'Discover effective strategies for trading in the foreign exchange market',
+      type: 'bootcamp',
       category: 'intermediate',
       image: course,
-    },    {
+    },
+    {
       id: 10,
-      title: 'Full Stack Web Development Bootcamp',
-      description: 'Become a full stack developer with this intensive bootcamp',
-      type: 'free',
+      title: 'Cryptocurrency Investing',
+      description: 'Learn how to invest in cryptocurrencies and navigate the crypto market',
+      type: 'bootcamp',
       category: 'intermediate',
       image: course,
-    },    {
+    },
+    {
       id: 11,
-      title: 'Full Stack Web Development Bootcamp',
-      description: 'Become a full stack developer with this intensive bootcamp',
+      title: 'Risk Management in Stock Trading',
+      description: 'Master the art of managing risks while trading stocks',
       type: 'free',
       category: 'intermediate',
       image: course,
     },
     {
       id: 12,
-      title: 'Machine Learning Mastery',
-      description: 'Advanced machine learning algorithms and applications',
+      title: 'Day Trading Strategies',
+      description: 'Explore effective day trading strategies for short-term gains',
       type: 'free',
       category: 'advanced',
       image: course,
-    },    {
+    },
+    {
       id: 13,
-      title: 'Machine Learning Mastery',
-      description: 'Advanced machine learning algorithms and applications',
+      title: 'Financial Analysis for Stock Investors',
+      description: 'Learn how to analyze financial statements and make informed investment decisions',
       type: 'free',
       category: 'advanced',
       image: course,
     },
   ];
+  
   const allCourses = [...dummyCourses, ...courses];
 
   return (
@@ -217,7 +223,7 @@ const Courses = () => {
             {allCourses
               .filter((course) => course.category === 'beginner')
               .map((course) => (
-                <div key={course.id} className="p-4">
+                <div key={course.id} className="p-4 cursor-pointer">
                   <div className="border rounded-lg overflow-hidden">
                     <img
                       src={course.image}
@@ -240,7 +246,7 @@ const Courses = () => {
             {allCourses
               .filter((course) => course.category === 'intermediate')
               .map((course) => (
-                <div key={course.id} className="p-4">
+                <div key={course.id} className="p-4 cursor-pointer">
                   <div className="border rounded-lg overflow-hidden">
                     <img
                       src={course.image}
@@ -263,7 +269,7 @@ const Courses = () => {
             {allCourses
               .filter((course) => course.category === 'advanced')
               .map((course) => (
-                <div key={course.id} className="p-4">
+                <div key={course.id} className="p-4 cursor-pointer">
                   <div className="border rounded-lg overflow-hidden">
                     <img
                       src={course.image}

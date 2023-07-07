@@ -41,7 +41,7 @@ const FreeCoursesSlider = ({ courses }) => {
             {courses
               .filter((course) => course.type === 'free')
               .map((course) => (
-                <div key={course.id} className="p-4">
+                <div key={course.id} className="p-4 cursor-pointer">
                   <div className="border rounded-lg overflow-hidden">
                     <img
                       src={course.image}

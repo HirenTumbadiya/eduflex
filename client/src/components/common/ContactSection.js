@@ -12,9 +12,9 @@ const ContactSection = () => {
         <p className="text-gray-700 mb-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum massa quis nunc pulvinar placerat. Fusce condimentum luctus nunc, ac porttitor mi venenatis non.
         </p>
-        <p className="text-gray-700 font-medium">Email: contact@example.com</p>
+        <p className="text-gray-700 font-medium">Email: tumbadiyahiren@gmail.com</p>
         <p className="text-gray-700 font-medium">Phone: +1234567890</p>
-        <p className="text-gray-700 font-medium">Address: 123 Street, City, Country</p>
+        <p className="text-gray-700 font-medium">Address: 123 Street, Gujarat, India</p>
       </div>
       <div className="bg-white rounded-lg shadow-lg p-6">
         <h3 className="text-xl font-bold mb-4">Send us a message</h3>
